@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel", "pybind11>=2.11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lsmash"
+version = "0.1.0"
+description = "Python bindings for lsmash"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Ishanu Chattopadhyay" }
+]
+license = { text = "BSD-3-Clause" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: C++",
+  "Operating System :: POSIX :: Linux",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = ["lsmash", "sequence-analysis", "symbolic", "pybind11"]
+
+[project.urls]
+Homepage = "https://github.com/YOURORG/lsmash"
+Source = "https://github.com/YOURORG/lsmash"
+Issues = "https://github.com/YOURORG/lsmash/issues"
+
+[tool.setuptools]
+packages = ["lsmash"]

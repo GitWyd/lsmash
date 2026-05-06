@@ -1,0 +1,4 @@
+include README.md
+recursive-include src *.hpp *.cpp
+recursive-include vendor/zbase *.h *.hpp *.cc
+recursive-include lsmash *.py
