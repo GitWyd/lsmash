@@ -1,0 +1,5 @@
+
+# --- git-gcs managed artifacts ---
+# Exact managed file/directory paths are appended below.
+/vendor
+!/vendor.gcs

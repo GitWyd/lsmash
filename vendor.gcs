@@ -1,0 +1,8 @@
+version: 1
+type: dir
+uri: gs://git-zeroknowledgediscovery-lsmash/vendor
+manifest_uri: gs://git-zeroknowledgediscovery-lsmash/vendor.__manifest__.tsv
+manifest_sha256: 584cc18a47408e659beb4a805a9364cc80341f70070faffcc19268abfbbba026
+file_count: 5
+total_bytes: 844787
+source_repo_relpath: vendor
