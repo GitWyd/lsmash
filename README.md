@@ -4,6 +4,13 @@ Self-contained `pybind11` wrapper for the `lsmash` core.
 
 This source distribution vendors the required `zbase` C++ sources directly into the package, so it does **not** require `ZUTIL_ROOT` or prebuilt `zbase` archives.
 
+# Install
+```
+python -m pip install "lsmash @ git+https://github.com/zeroknowledgediscovery/lsmash.git"
+
+```
+
+
 ## Linux build dependencies
 
 You still need system development libraries available to the compiler/linker:
