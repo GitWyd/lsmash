@@ -1,8 +1,13 @@
 # lsmash
 
-Self-contained `pybind11` wrapper for the `lsmash` core.
+# Data Smashing 2.0
 
-This source distribution vendors the required `zbase` C++ sources directly into the package, so it does **not** require `ZUTIL_ROOT` or prebuilt `zbase` archives.
+This is an implementation of the algorithm reported in "Data Smashing 2.0: Sequence Likelihood (SL) Divergence For Fast Time Series Comparison"
+
++ https://arxiv.org/abs/1909.12243
+
++ Huang, Yi, Victor Rotaru, and Ishanu Chattopadhyay. "Sequence likelihood divergence for fast time series comparison." Knowledge and Information Systems 65, no. 7 (2023): 3079-3098.
+
 
 # Install
 ```
