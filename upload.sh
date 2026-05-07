@@ -29,11 +29,7 @@ echo __version__ = \'$VERSION\' > version.py
 git tag $VERSION -m $COMMENT
 git push --tags
 
-rm -rf dist
-
-python3 setup.py sdist
-python3 setup.py bdist_wheel
+python -m build
 twine check dist/*
-twine upload dist/*
 
-
+twine upload dist/* --verbose
