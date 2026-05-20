@@ -63,14 +63,17 @@ The macOS build uses a self-contained [conda](https://docs.conda.io) environment
 no system-wide packages are modified. All C++ dependencies (Boost, GSL, OpenMP) are
 installed into an isolated prefix inside the project directory.
 
-**Prerequisites:** [Homebrew](https://brew.sh) and [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html).
+**Prerequisites:** [Homebrew](https://brew.sh). All other dependencies are managed inside
+the project directory — nothing is installed system-wide.
 
 If you don't have micromamba:
 ```bash
 brew install micromamba
 ```
 
-**1. Create the environment** (one-time setup, installs into `.env/` inside the repo):
+Run all of the following from the **repo root**:
+
+**1. Create the environment** (one-time setup — installs into `.env/` inside the repo):
 ```bash
 micromamba create --prefix ./.env -f environment.yml -y
 ```
@@ -87,18 +90,22 @@ micromamba run -p ./.env python -c "import lsmash; print('ok')"
 
 #### Day-to-day development
 
+All commands below should be run from the repo root.
+
 | Task | Command |
 |------|---------|
 | Run a script | `micromamba run -p ./.env python script.py` |
 | Rebuild after C++ edits | `micromamba run -p ./.env pip install -e .` |
 | Open JupyterLab | `micromamba run -p ./.env jupyter lab` |
 | Interactive shell | `micromamba run -p ./.env python` |
-| Deactivate / exit | `exit` (or close the terminal) |
 | Remove the environment | `rm -rf ./.env` |
 
 > **Note:** Python-side changes (files under `lsmash/`) take effect immediately without a
 > rebuild. Only changes to C++ source (`src/`, `vendor/zbase/`) require re-running
 > `pip install -e .`.
+>
+> This workflow is tested on Apple Silicon (M-series). It should also work on Intel Macs
+> with no changes, since all paths are resolved via the conda environment.
 
 ---
 
