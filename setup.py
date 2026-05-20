@@ -9,9 +9,11 @@ conda_prefix = os.environ.get('CONDA_PREFIX', '')
 if system == 'Darwin':
     extra_compile_args = ['-O3', '-std=c++17', '-fPIC', '-Xpreprocessor', '-fopenmp']
     extra_link_args = []
+    openmp_lib = 'omp'    # llvm-openmp (conda-forge / Homebrew libomp)
 else:
     extra_compile_args = ['-O3', '-std=c++17', '-fPIC', '-fopenmp']
     extra_link_args = ['-fopenmp', '-Wl,-Bdynamic']
+    openmp_lib = 'gomp'   # libgomp shipped with GCC on Linux
 
 library_dirs = []
 include_dirs = ['src', 'vendor/zbase']
@@ -46,7 +48,7 @@ ext_modules = [
             'boost_system',
             'gsl',
             'gslcblas',
-            'omp',
+            openmp_lib,
             'm',
             'pthread',
         ],
