@@ -1,0 +1,17 @@
+name: lsmash
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - boost
+  - gsl
+  - llvm-openmp
+  - compilers
+  - numpy
+  - pandas
+  - jupyterlab
+  - pip
+  - pip:
+    - pybind11>=2.11
+    - setuptools>=69
+    - wheel
