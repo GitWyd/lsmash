@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+
+# Compiled extensions (platform-specific — rebuild from source)
+*.so
+*.dylib
+*.pyd
+
+# Conda environment (scoped inside repo)
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/
