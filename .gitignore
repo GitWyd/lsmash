@@ -17,6 +17,9 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
+# Generated plots from notebooks
+examples/*.png
+
 # Editor
 .vscode/
 .idea/
