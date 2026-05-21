@@ -15,6 +15,12 @@ dependencies:
   - scipy
   - seaborn
   - yfinance
+  - statsmodels
+  - scikit-learn
+  - pip:
+    - pycwt
+    - EMD-signal
+    - pmdarima
   - pip:
     - pybind11>=2.11
     - setuptools>=69
